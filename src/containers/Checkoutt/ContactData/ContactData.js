@@ -45,6 +45,7 @@ class ContactData extends Component {
                     minLength: 5,
                     maxLength: 5
                 },
+                errorMessage: 'Zip Code should have 5 characters',
                 valid: false,
                 touched: false
             },
@@ -161,6 +162,7 @@ class ContactData extends Component {
                         invalid={!formElement.config.valid}
                         shouldValidate={formElement.config.validation}
                         touched={formElement.config.touched}
+                        errorMessage={formElement.config.errorMessage}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
                 ))}
                 <Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
