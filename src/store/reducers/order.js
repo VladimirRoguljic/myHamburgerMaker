@@ -42,7 +42,7 @@ const fetchOrdersSuccess = (state, action) => {
 
 const fetchOrdersFail = (state, action) => {
     return updateObject(state, {loading: false});
-};
+}
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -55,19 +55,19 @@ const reducer = (state = initialState, action) => {
             return purchaseBurgerStart(state, action);
 
         case  actionTypes.PURCHASE_BURGER_SUCCESS:
-            return purchaseBurgerSuccess(state, action);
+            return purchaseBurgerSuccess(state,action);
 
         case actionTypes.PURCHASE_BURGER_FAIL:
-            return purchaseBurgerFail(state, action);
+            return purchaseBurgerFail(state,action);
 
         case actionTypes.FETCH_ORDERS_START:
-            return fetchOrderStart(state, action);
+          return fetchOrderStart(state,action);
 
         case actionTypes.FETCH_ORDERS_SUCCESS:
-            return fetchOrdersSuccess(state, action);
+         return fetchOrdersSuccess(state,action);
 
         case actionTypes.FETCH_ORDERS_FAIL:
-            return fetchOrdersFail(state, action);
+         return fetchOrdersFail(state,action);
 
         default:
             return state
