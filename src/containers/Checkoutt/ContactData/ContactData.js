@@ -73,8 +73,10 @@ class ContactData extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true
+                    required: true,
+                    isEmail: true
                 },
+                errorMessage: 'Email must be correct format, example: john_doe@gmail.com',
                 valid: false,
                 touched: false
             },

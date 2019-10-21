@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const purchaseInit = (state, action) => {
-    return updateObject(state, {error: true})
+    return updateObject(state, {purchased: false})
 };
 
 const purchaseBurgerStart = (state, action) => {
@@ -42,7 +42,7 @@ const fetchOrdersSuccess = (state, action) => {
 
 const fetchOrdersFail = (state, action) => {
     return updateObject(state, {loading: false});
-}
+};
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
