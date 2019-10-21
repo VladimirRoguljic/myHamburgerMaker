@@ -48,7 +48,8 @@ class ContactData extends Component {
                     minLength: 5,
                     maxLength: 5
                 },
-                errorMessage: 'Zip Code should have 5 characters',
+
+                errorMessage: 'Zip Code should have 5 characters, support only numeric number',
                 valid: false,
                 touched: false
             },
