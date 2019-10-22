@@ -40,8 +40,8 @@ class Auth extends Component {
                 errorMessage: 'Password must have at least 6 characters',
                 touched: false
             },
-            isSignUp: true
-        }
+        },
+         isSignUp: true
     };
 
     switchAuthModeHandler = () => {
