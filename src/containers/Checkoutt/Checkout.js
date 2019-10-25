@@ -5,6 +5,8 @@ import ContactData from './ContactData/ContactData';
 import {connect} from 'react-redux';
 
 
+
+
 class Checkout extends Component {
 
 
@@ -19,6 +21,7 @@ class Checkout extends Component {
 
     render() {
         let summary = <Redirect to="/" />;
+
         if (this.props.ings) {
              const purchasedRedirect = this.props.purchased ? <Redirect to="/"/> : null;
             summary = (
@@ -30,6 +33,7 @@ class Checkout extends Component {
                         checkoutContinued={this.checkoutContinuedHandler}/>
                     <Route path={this.props.match.path + '/contact-data'}
                            component={ContactData}/>
+
                 </div>
             );
         }
