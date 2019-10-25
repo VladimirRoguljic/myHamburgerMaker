@@ -4,11 +4,7 @@ import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSumm
 import ContactData from './ContactData/ContactData';
 import {connect} from 'react-redux';
 
-
-
-
 class Checkout extends Component {
-
 
     onCheckoutCancelledHandler = () => {
         this.props.history.goBack();
@@ -47,6 +43,5 @@ const mapStateToProps = state => {
         purchased: state.order.purchased
     }
 };
-
 
 export default connect(mapStateToProps)(Checkout);

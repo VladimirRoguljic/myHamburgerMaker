@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const purchaseInit = (state, action) => {
-    return updateObject(state)
+    return updateObject(state, {purchased: false})
 };
 
 const purchaseBurgerStart = (state, action) => {
@@ -22,6 +22,8 @@ const purchaseBurgerSuccess = (state, action) => {
         purchased: true,
         orders: state.order.concat(newOrder),
     });
+
+
 
 
 };
@@ -42,6 +44,7 @@ const fetchOrdersSuccess = (state, action) => {
         loading: false
     });
 };
+
 
 const fetchOrdersFail = (state, action) => {
     return updateObject(state, {loading: false});
